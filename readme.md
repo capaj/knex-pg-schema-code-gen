@@ -8,6 +8,14 @@ Having the DB instrumentation in JS makes it much more maintainable in the long 
 
 ```javascript
 import schemaGenerator from './schema-gen'
+import knex from 'knex'
+
+const db = knex({
+  client: 'pg',
+  connection: {
+    // your DB connection details here
+  }
+})
 const schemaCode = await schemaGenerator(db)  // schema is a string with calls for all tables
 const schemaCode = await schemaGenerator(db, 'my_uber_table')  // optionally you can call with second argument to limit for just one table
 ```
