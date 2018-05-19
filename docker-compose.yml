@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    ports:
+      - "35432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgresrootpassword
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=schemaGenTest

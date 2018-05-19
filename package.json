@@ -1,0 +1,35 @@
+{
+  "name": "knex-pg-schema-code-gen",
+  "version": "0.0.1",
+  "description":
+    "generates a knex schema createTable calls from an existing database",
+  "main": "schema-gen.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "engines": {
+    "node": ">8"
+  },
+  "keywords": ["knex", "postgresql"],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "pg-structure": "^4.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^22.4.4",
+    "knex": "^0.14.6",
+    "pg": "^7.4.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
+    }
+  }
+}
